@@ -18,7 +18,7 @@ RUN wget "http://apache.uberglobalmirror.com/tomcat/tomcat-8/v8.0.24/bin/apache-
 # The APR based Apache Tomcat Native library which allows optimal performance in
 # production environments was not found on the java.library.path
 # This step will give warnings but they don't seem to cause any problems
-RUN rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm && \
+RUN rpm -Uvh http://fedora.uberglobalmirror.com/epel//7/x86_64/e/epel-release-7-5.noarch.rpm && \
     yum -y install tomcat-native && \
     yum clean all
 
