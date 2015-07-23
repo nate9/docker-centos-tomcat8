@@ -39,3 +39,7 @@ ADD tomcat-users.xml /usr/local/apache-tomcat-8.0.24/conf/tomcat-users.xml
 
 # Expose the standard Tomcat ports
 EXPOSE 8080
+
+# Start Tomcat in the background
+ENV CATALINA_HOME /usr/local/apache-tomcat-6.0.41
+CMD exec ${CATALINA_HOME}/bin/catalina.sh run
